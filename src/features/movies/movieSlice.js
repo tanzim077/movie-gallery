@@ -8,6 +8,7 @@ const initialState = {
   selectMovieOrShow: {},
 };
 
+//catch the movies from the api request
 export const fetchAsyncMovies = createAsyncThunk(
   "movies/fetchAsyncMovies",
   async (term) => {
@@ -18,6 +19,7 @@ export const fetchAsyncMovies = createAsyncThunk(
   }
 );
 
+//catch the series from the api request
 export const fetchAsyncShows = createAsyncThunk(
   "movies/fetchAsyncShows",
   async (term) => {
@@ -28,6 +30,7 @@ export const fetchAsyncShows = createAsyncThunk(
   }
 );
 
+//catch the details of movie/ series from the api request
 export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
   "movies/fetchAsyncMovieOrShowDetail",
   async (id) => {
@@ -35,6 +38,7 @@ export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
     return response.data;
   }
 );
+
 
 const movieSlice = createSlice({
   name: "movies",
